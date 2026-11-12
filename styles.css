@@ -11,8 +11,8 @@
   --primary-700: #1D485E;
   --primary-900: #143543;
 
-  /* Warm accents — used sparingly */
-  --kowhai: #F2B33D;   /* sun-yellow */
+  /* Accents — used sparingly. Blue-led per client preference (was sun-yellow). */
+  --kowhai: #4F9FC9;   /* sky-blue accent */
   --coral:  #E4674C;   /* coral */
   --leaf:   #6F9A54;   /* leaf green */
 
