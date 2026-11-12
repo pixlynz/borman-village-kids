@@ -346,7 +346,7 @@ strong { color: var(--ink); font-weight: 700; }
   margin-bottom: 0.4rem;
 }
 .card-badge svg { width: 26px; height: 26px; }
-.card.accent-sun .card-badge { background: var(--kowhai); color: var(--primary-900); }
+.card.accent-sun .card-badge { background: var(--kowhai); color: #fff; }
 .card.accent-coral .card-badge { background: var(--coral); color: #fff; }
 .card.accent-leaf .card-badge { background: var(--leaf); color: #fff; }
 .card-top-rule { border-top: 3px solid var(--sand-200); }
@@ -438,7 +438,7 @@ strong { color: var(--ink); font-weight: 700; }
   display: grid; place-items: center;
   line-height: 1;
 }
-.step:nth-child(2) .step-num { background: var(--kowhai); color: var(--primary-900); }
+.step:nth-child(2) .step-num { background: var(--kowhai); }
 .step:nth-child(3) .step-num { background: var(--coral); }
 .step:nth-child(4) .step-num { background: var(--leaf); }
 .step h3 { margin-bottom: 0.5rem; }
@@ -510,7 +510,7 @@ strong { color: var(--ink); font-weight: 700; }
   background: var(--sand-100); color: var(--primary);
   border: 1px solid var(--sand-200);
 }
-.chip.sun { background: var(--kowhai); color: var(--primary-900); border-color: transparent; }
+.chip.sun { background: var(--kowhai); color: #fff; border-color: transparent; }
 .chip.coral { background: var(--coral); color: #fff; border-color: transparent; }
 .chip.leaf { background: var(--leaf); color: #fff; border-color: transparent; }
 
@@ -524,7 +524,7 @@ strong { color: var(--ink); font-weight: 700; }
 .kai-item { display: grid; grid-template-columns: 42px 1fr; gap: 0.9rem; align-items: start; }
 .kai-ico { width: 42px; height: 42px; display: grid; place-items: center; }
 .kai-ico svg { width: 22px; height: 22px; }
-.kai-ico.sun { background: var(--kowhai); color: var(--primary-900); }
+.kai-ico.sun { background: var(--kowhai); color: #fff; }
 .kai-ico.leaf { background: var(--leaf); color: #fff; }
 .kai-ico.coral { background: var(--coral); color: #fff; }
 .kai-item p { margin: 0; font-size: 1rem; }
@@ -586,7 +586,7 @@ a.val:hover { color: var(--coral); }
   color: #fff;
   transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
 }
-.footer-social a:hover { background: var(--kowhai); border-color: var(--kowhai); color: var(--primary-900); }
+.footer-social a:hover { background: var(--kowhai); border-color: var(--kowhai); color: #fff; }
 .footer-social svg { width: 18px; height: 18px; }
 .footer-col h4 { color: #fff; font-family: var(--display); font-size: 1.05rem; margin-bottom: 1.1rem; letter-spacing: 0.02em; }
 .footer-col li { margin-bottom: 0.6rem; }
