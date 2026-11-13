@@ -11,18 +11,17 @@
     --coral: #E4674C;
     --leaf: #6F9A54;
     --sand-050: #FBF7EF;
-    --sand-100: #F4EDDF;
     --sand-300: #DDCFB4;
     --ink: #22292D;
     --muted: #5B6670;
   }
-  @page { size: A4; margin: 0; }
+  @page { size: A4; margin: 16mm 18mm; }
   * { box-sizing: border-box; }
   body {
     font-family: "Nunito Sans", system-ui, sans-serif;
     color: var(--ink);
-    font-size: 10.5pt;
-    line-height: 1.65;
+    font-size: 9.3pt;
+    line-height: 1.5;
     margin: 0;
     background: #fff;
   }
@@ -33,81 +32,76 @@
     line-height: 1.15;
     margin: 0;
   }
-  h1 { font-size: 30pt; font-weight: 800; }
-  h2 { font-size: 16pt; margin-top: 4pt; }
-  p { margin: 0 0 9pt; }
-  ul { margin: 0 0 9pt; padding-left: 0; list-style: none; }
-  li { margin-bottom: 6pt; padding-left: 14pt; position: relative; }
+  h1 { font-size: 24pt; font-weight: 800; }
+  h2 { font-size: 13pt; }
+  p { margin: 0 0 6pt; }
+  ul { margin: 0 0 6pt; padding-left: 0; list-style: none; }
+  li { margin-bottom: 3pt; padding-left: 12pt; position: relative; }
   li::before { content: "•"; position: absolute; left: 0; color: var(--coral); }
   strong { font-weight: 800; }
   .path { font-weight: 800; color: var(--primary); }
 
   .kicker {
-    display: flex; align-items: center; gap: 8pt;
-    text-transform: uppercase; letter-spacing: .12em; font-size: 8pt; font-weight: 800;
-    color: var(--primary); margin-bottom: 8pt;
+    display: flex; align-items: center; gap: 7pt;
+    text-transform: uppercase; letter-spacing: .1em; font-size: 7.5pt; font-weight: 800;
+    color: var(--primary); margin-bottom: 5pt;
   }
-  .kicker::before { content: ""; width: 18pt; height: 2.4pt; background: var(--coral); display: inline-block; }
+  .kicker::before { content: ""; width: 15pt; height: 2.2pt; background: var(--coral); display: inline-block; }
   .kicker.leaf::before { background: var(--leaf); }
   .kicker.kowhai::before { background: var(--kowhai); }
 
-  .cover { padding: 30mm 22mm 14mm; }
-  .cover .kicker { color: var(--primary); }
-  .cover p.intro { font-size: 12pt; color: var(--muted); max-width: 34em; margin-top: 10pt; }
+  .intro { font-size: 10.5pt; color: var(--muted); max-width: 34em; margin: 8pt 0 0; }
 
-  .page { padding: 0 22mm; }
-  .section { break-inside: avoid-page; margin-bottom: 22pt; }
+  .section { break-inside: avoid-page; margin-bottom: 14pt; }
 
   .band {
     background: var(--sand-050);
-    border-radius: 12pt;
-    padding: 14pt 16pt;
-    margin: 10pt 0 2pt;
+    border-radius: 8pt;
+    padding: 8pt 11pt;
+    margin: 7pt 0 0;
     break-inside: avoid;
+    font-size: 9pt;
   }
   .band p:last-child, .band ul:last-child { margin-bottom: 0; }
 
-  .steps { margin: 10pt 0 0; padding: 0; }
-  .step { display: flex; gap: 12pt; margin-bottom: 14pt; break-inside: avoid; }
+  .steps { margin: 7pt 0 0; padding: 0; }
+  .step { display: flex; gap: 9pt; margin-bottom: 7pt; break-inside: avoid; }
   .step-num {
-    flex-shrink: 0; width: 22pt; height: 22pt; border-radius: 6pt;
+    flex-shrink: 0; width: 17pt; height: 17pt; border-radius: 5pt;
     display: flex; align-items: center; justify-content: center;
-    font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 11pt; color: #fff;
+    font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 9pt; color: #fff;
   }
-  .step-body h3 { font-size: 10.5pt; margin-bottom: 2pt; }
-  .step-body p { margin-bottom: 0; color: var(--muted); }
+  .step-body h3 { font-size: 9.3pt; display: inline; }
+  .step-body p { display: inline; margin: 0; color: var(--muted); }
+  .step-body h3::after { content: " — "; color: var(--muted); font-weight: 400; }
 
-  .kv { margin: 10pt 0 0; }
-  .kv-row { display: flex; gap: 18pt; padding: 9pt 0; border-bottom: 1px solid var(--sand-300); break-inside: avoid; }
+  .kv { margin: 6pt 0 0; }
+  .kv-row { display: flex; gap: 14pt; padding: 5pt 0; border-bottom: 1px solid var(--sand-300); break-inside: avoid; }
   .kv-row:first-child { padding-top: 0; }
   .kv-row:last-child { border-bottom: none; }
-  .kv-term { width: 36%; font-weight: 800; flex-shrink: 0; }
+  .kv-term { width: 34%; font-weight: 800; flex-shrink: 0; }
   .kv-desc { flex: 1; color: var(--muted); }
   .kv-desc .path { color: var(--primary); }
 
-  .foot {
-    margin-top: 10pt; padding: 14pt 22mm 20mm;
-    background: var(--primary-900); color: #fff;
-    font-size: 9.5pt;
-  }
-  .foot strong { color: #fff; }
+  hr.rule { border: none; border-top: 1px solid var(--sand-300); margin: 14pt 0; }
+
+  .foot { margin-top: 14pt; padding-top: 8pt; border-top: 2px solid var(--primary-900); font-size: 8.5pt; color: var(--muted); }
+  .foot strong { color: var(--ink); }
 </style>
 </head>
 <body>
 
-<div class="cover">
-  <div class="kicker">Borman Village Kids</div>
-  <h1>Editing your website</h1>
-  <p class="intro">The main words and photos on your website can be changed from your WordPress dashboard, without touching any code. This guide walks you through it.</p>
-</div>
+<div class="kicker">Borman Village Kids</div>
+<h1>Editing your website</h1>
+<p class="intro">The main words and photos on your website can be changed from your WordPress dashboard, without touching any code. This guide walks you through it.</p>
 
-<div class="page">
+<hr class="rule">
 
 <div class="section">
   <div class="kicker leaf">Getting started</div>
   <h2>Logging in</h2>
   <p>Go to <strong>bormanvillagekids.co.nz/wp-admin</strong> and log in with your WordPress.com email and password. You'll land on the dashboard, with a menu down the left side.</p>
-  <div class="band"><p>While logged in and browsing your own site, a dark admin bar runs across the top. <strong>Edit Page</strong> in that bar jumps you straight to editing the page you're looking at.</p></div>
+  <div class="band">While logged in and browsing your own site, a dark admin bar runs across the top. <strong>Edit Page</strong> in that bar jumps you straight to editing the page you're looking at.</div>
 </div>
 
 <div class="section">
@@ -120,14 +114,13 @@
     </div>
     <div class="kv-row">
       <div class="kv-term">The homepage's words and photos</div>
-      <div class="kv-desc"><span class="path">Pages &rarr; Home (page content)</span> — see note below</div>
+      <div class="kv-desc"><span class="path">Pages &rarr; Home (page content)</span> &mdash; your homepage is built from this page, not shown as itself</div>
     </div>
     <div class="kv-row">
-      <div class="kv-term">Site title shown in browser tabs</div>
+      <div class="kv-term">Site title in browser tabs</div>
       <div class="kv-desc"><span class="path">Settings &rarr; General</span></div>
     </div>
   </div>
-  <div class="band"><p><strong>About "Home (page content)":</strong> your actual homepage isn't a page you can open and edit directly, it's built from this one. Open it to change the homepage's words and photos — visitors see the real homepage, built using whatever you've entered there.</p></div>
 </div>
 
 <div class="section">
@@ -136,37 +129,35 @@
   <div class="steps">
     <div class="step">
       <div class="step-num" style="background:var(--kowhai)">1</div>
-      <div class="step-body"><h3>Open the page</h3><p>Go to <strong>Pages</strong> and click the page you want, for example <em>About Us</em>.</p></div>
+      <div class="step-body"><h3>Open the page</h3><p>Go to <strong>Pages</strong>, click the page you want (e.g. <em>About Us</em>).</p></div>
     </div>
     <div class="step">
       <div class="step-num" style="background:var(--leaf)">2</div>
-      <div class="step-body"><h3>Find the content box</h3><p>Scroll past the usual title and content area to the <strong>Page content</strong> box. Each editable piece of text or photo has its own field, labelled to match what it is.</p></div>
+      <div class="step-body"><h3>Find the content box</h3><p>Scroll to the <strong>Page content</strong> box &mdash; each field is labelled to match what it is.</p></div>
     </div>
     <div class="step">
       <div class="step-num" style="background:var(--coral)">3</div>
-      <div class="step-body"><h3>Make your changes</h3><p>Click into a text box and type, or click a photo field to remove it and upload a new one.</p></div>
+      <div class="step-body"><h3>Make your changes</h3><p>Type into a text box, or click a photo field to swap the image.</p></div>
     </div>
     <div class="step">
       <div class="step-num" style="background:var(--primary)">4</div>
-      <div class="step-body"><h3>Save and check</h3><p>Click the blue <strong>Update</strong> button, then <strong>View Page</strong> to see how it looks live.</p></div>
+      <div class="step-body"><h3>Save and check</h3><p>Click <strong>Update</strong>, then <strong>View Page</strong> to see it live.</p></div>
     </div>
   </div>
-  <div class="band">
-    <p><strong>A few things to know:</strong> leave a blank line between paragraphs if a field holds more than one. Photos look best close to the same shape as the one you're replacing — a very differently shaped photo may get cropped oddly. If you leave a field blank, the site just falls back to showing the original text or photo; nothing breaks.</p>
-  </div>
+  <div class="band">Leave a blank line between paragraphs if a field holds more than one. Photos look best close to the same shape as the one you're replacing. Leaving a field blank just shows the original text or photo &mdash; nothing breaks.</div>
 </div>
 
 <div class="section">
   <div class="kicker coral">Good to know</div>
   <h2>What you can't change here</h2>
-  <p>To keep the design and layout working properly, a few things are fixed in the site's code rather than editable fields:</p>
+  <p>A few things stay fixed in the site's code to protect the design:</p>
   <ul>
-    <li>Navigation menu, buttons, and small labels (like "Kai", section kickers)</li>
-    <li>Contact details, opening hours, and social media links in the footer</li>
-    <li>The "Enquire" and "Enrolment application" links, which go to your Discover enrolment system</li>
+    <li>Navigation menu, buttons, and small labels</li>
+    <li>Contact details, hours, and social links in the footer</li>
+    <li>The "Enquire" and "Enrolment application" links (your Discover system)</li>
     <li>Colours, fonts, and overall page layout</li>
   </ul>
-  <div class="band"><p><strong>Need any of these changed?</strong> Get in touch with Michelle at Pixly and she'll make the update for you.</p></div>
+  <div class="band"><strong>Need any of these changed?</strong> Get in touch with Michelle at Pixly and she'll make the update for you.</div>
 </div>
 
 <div class="section">
@@ -182,9 +173,7 @@
       <div class="kv-desc">Registered with Crazy Domains (crazydomains.co.nz)</div>
     </div>
   </div>
-  <div class="band"><p>Both accounts are in your name and billed directly to you, so you're always in control of them. Michelle doesn't have ongoing access to your billing or passwords.</p></div>
-</div>
-
+  <div class="band">Both accounts are in your name and billed directly to you. Michelle doesn't have ongoing access to your billing or passwords.</div>
 </div>
 
 <div class="foot">Borman Village Kids &middot; website by Pixly &middot; questions any time: <strong>michelle@pixly.co.nz</strong></div>
