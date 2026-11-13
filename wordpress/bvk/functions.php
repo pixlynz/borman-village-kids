@@ -10,7 +10,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BVK_VERSION', '1.0.3' );
+define( 'BVK_VERSION', '1.0.4' );
 
 require_once __DIR__ . '/inc/setup.php';
 
