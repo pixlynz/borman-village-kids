@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<title>Editing your website | Borman Village Kids</title>
+<style>
+  :root {
+    --primary: #255B77;
+    --primary-700: #1D485E;
+    --kowhai: #4F9FC9;
+    --coral: #E4674C;
+    --leaf: #6F9A54;
+    --sand-050: #FBF7EF;
+    --sand-100: #F4EDDF;
+    --sand-300: #DDCFB4;
+    --ink: #1F2B30;
+  }
+  @page { size: A4; margin: 18mm 18mm 20mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Nunito Sans", system-ui, sans-serif;
+    color: var(--ink);
+    font-size: 10.5pt;
+    line-height: 1.6;
+    margin: 0;
+    background: #fff;
+  }
+  h1, h2 {
+    font-family: "Baloo 2", system-ui, sans-serif;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.1;
+    margin: 0;
+  }
+  h1 { font-size: 32pt; margin-bottom: 6pt; }
+  h2 { font-size: 18pt; margin: 20pt 0 8pt; break-after: avoid; }
+  h3 { font-size: 11pt; font-weight: 800; color: var(--primary-700); margin: 12pt 0 3pt; break-after: avoid; }
+  p { margin: 0 0 6pt; }
+  ol, ul { margin: 0 0 8pt; padding-left: 16pt; }
+  li { margin-bottom: 4pt; }
+  li::marker { color: var(--coral); font-weight: 700; }
+  strong { font-weight: 800; }
+  .cover { background: var(--primary); color: #fff; border-radius: 14pt; padding: 26pt 26pt 22pt; margin-bottom: 14pt; }
+  .cover h1 { color: #fff; }
+  .cover p { font-size: 11.5pt; max-width: 40em; opacity: 0.92; }
+  .label { text-transform: uppercase; letter-spacing: .12em; font-size: 8pt; font-weight: 800; color: var(--kowhai); margin-bottom: 8pt; }
+  .box { background: var(--sand-050); border-radius: 10pt; padding: 10pt 14pt; margin: 8pt 0 10pt; break-inside: avoid; }
+  .box.tip { border-left: 4pt solid var(--kowhai); }
+  .box.care { border-left: 4pt solid var(--coral); }
+  .box p:last-child, .box ul:last-child { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 6pt 0 10pt; break-inside: avoid; }
+  th, td { text-align: left; vertical-align: top; padding: 6pt 8pt; border-bottom: 1px solid var(--sand-300); }
+  th { font-size: 8pt; text-transform: uppercase; letter-spacing: .1em; color: var(--primary); }
+  td:first-child { font-weight: 700; width: 34%; }
+  .path { font-weight: 700; color: var(--primary-700); }
+  .section { break-inside: avoid-page; }
+  .foot { margin-top: 20pt; padding-top: 8pt; border-top: 1px solid var(--sand-300); font-size: 9pt; color: var(--primary); }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="label">Borman Village Kids</div>
+  <h1>Editing your website</h1>
+  <p>The main words and photos on your website can be changed from your WordPress dashboard, without touching any code. This guide walks you through it.</p>
+</div>
+
+<div class="section">
+<h2>Logging in</h2>
+<p>Go to <strong>bormanvillagekids.co.nz/wp-admin</strong> and log in with your WordPress.com email and password. You'll land on the dashboard, with a menu down the left side.</p>
+<div class="box tip"><p><strong>Tip:</strong> while logged in and browsing your own site, a dark admin bar runs across the top. "Edit Page" in that bar jumps you straight to editing the page you're looking at.</p></div>
+</div>
+
+<div class="section">
+<h2>Where things live</h2>
+<table>
+<tr><th>To change</th><th>Go to</th></tr>
+<tr><td>Words and photos on a page</td><td><span class="path">Pages</span>, click the page name, scroll to the <span class="path">Page content</span> box</td></tr>
+<tr><td>The homepage's words and photos</td><td><span class="path">Pages</span> &rarr; <span class="path">Home (page content)</span> &mdash; see note below</td></tr>
+<tr><td>Site title shown in browser tabs</td><td><span class="path">Settings</span> &rarr; <span class="path">General</span></td></tr>
+</table>
+<div class="box tip"><p><strong>About the "Home (page content)" page:</strong> your actual homepage isn't a page you can open and edit directly, it's built from this one. Open <strong>Pages &rarr; Home (page content)</strong> to change the homepage's words and photos; your visitors see the real homepage, built using whatever you've entered there.</p></div>
+</div>
+
+<div class="section">
+<h2>Changing words on a page</h2>
+<ol>
+  <li>Go to <strong>Pages</strong> and click the page you want, for example <em>About Us</em>.</li>
+  <li>Scroll down past the usual title/content area to the <strong>Page content</strong> box. Each editable piece of text or photo on that page has its own field, labelled to match what it is (for example "Hero photo" or "'Family focus' paragraph").</li>
+  <li>Click into a text box and type your changes.</li>
+  <li>To replace a photo, click the photo field and choose "Remove" then upload a new one, or use "Edit Image" if one's already there.</li>
+  <li>Click the blue <strong>Update</strong> button on the right to save.</li>
+  <li>Click <strong>View Page</strong> to check how it looks on the live site.</li>
+</ol>
+<div class="box tip">
+  <p><strong>A few things to know:</strong></p>
+  <ul>
+    <li>Leave a blank line between paragraphs if a field holds more than one.</li>
+    <li>Photos look best close to the same shape (wide or square) as the one you're replacing &mdash; a very differently shaped photo may get cropped oddly.</li>
+    <li>If you leave a field blank, the site just falls back to showing the original text or photo, nothing breaks.</li>
+  </ul>
+</div>
+</div>
+
+<div class="section">
+<h2>What you can't change here</h2>
+<p>To keep the design and layout working properly, a few things are fixed in the site's code rather than editable fields:</p>
+<ul>
+  <li>Navigation menu, buttons, and small labels (like "Kai", section kickers)</li>
+  <li>Contact details, opening hours, and social media links in the footer</li>
+  <li>The "Enquire" and "Enrolment application" links, which go to your Discover enrolment system</li>
+  <li>Colours, fonts, and overall page layout</li>
+</ul>
+<div class="box care"><p><strong>Need any of these changed?</strong> Get in touch with Michelle at Pixly and she'll make the update for you.</p></div>
+</div>
+
+<div class="section">
+<h2>Your accounts</h2>
+<table>
+<tr><th>What</th><th>Where</th></tr>
+<tr><td>Website (WordPress.com)</td><td>bormanvillagekids.co.nz/wp-admin</td></tr>
+<tr><td>Domain name</td><td>Registered with Crazy Domains (crazydomains.co.nz)</td></tr>
+</table>
+<div class="box tip"><p>Both accounts are in your name and billed directly to you, so you're always in control of them. Michelle doesn't have ongoing access to your billing or passwords.</p></div>
+</div>
+
+<div class="foot">Borman Village Kids &middot; website by Pixly &middot; questions any time: michelle@pixly.co.nz</div>
+
+</body>
+</html>
