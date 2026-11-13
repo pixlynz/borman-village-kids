@@ -8,9 +8,10 @@ get_header();
 ?>
 
   <!-- ============ PAGE HERO ============ -->
+  <?php $bvk_hero = bvk_image_data( 'enrolment', 'hero_image', bvk_asset( 'images/bikes.webp' ), 'Two trikes on the grass beside a stop sign, ready for play in the outdoor area.' ); ?>
   <section class="page-hero">
     <div class="page-hero-media">
-      <img fetchpriority="high" src="<?php echo esc_url( bvk_asset( 'images/bikes.webp' ) ); ?>" alt="Two trikes on the grass beside a stop sign, ready for play in the outdoor area.">
+      <img fetchpriority="high" src="<?php echo esc_url( $bvk_hero['src'] ); ?>" alt="<?php echo esc_attr( $bvk_hero['alt'] ); ?>">
     </div>
     <div class="wrap">
       <p class="crumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a> &nbsp;/&nbsp; Enrolment</p>
@@ -79,17 +80,17 @@ get_header();
   <section class="section">
     <div class="wrap">
       <div class="split reverse">
+        <?php $bvk_sp_img = bvk_image_data( 'enrolment', 'storypark_image', bvk_asset( 'images/walk-vests.webp' ), 'Tamariki sitting together in their Borman Village Kids hi-vis vests, ready for a walk.' ); ?>
         <div class="split-media reveal">
           <div class="framed">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/walk-vests.webp' ) ); ?>" alt="Tamariki sitting together in their Borman Village Kids hi-vis vests, ready for a walk.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_sp_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_sp_img['alt'] ); ?>">
           </div>
         </div>
         <div class="split-body reveal d1">
           <span class="kicker">Once you are with us</span>
           <h2>A window into your child's days.</h2>
           <div class="text-block stack">
-            <p>We record your child's learning through <strong>Storypark</strong>, a secure online space, shared privately with you as it happens.</p>
-            <p>Local walks and excursions are part of our curriculum, and our open-door policy means you are welcome any time.</p>
+            <?php bvk_rich( 'enrolment', 'storypark_text', "We record your child's learning through <strong>Storypark</strong>, a secure online space, shared privately with you as it happens.\n\nLocal walks and excursions are part of our curriculum, and our open-door policy means you are welcome any time." ); ?>
           </div>
           <div class="chips mt-m">
             <span class="chip">Secure portfolio</span>

@@ -4,14 +4,15 @@ get_header();
 ?>
 
   <!-- ============ HERO ============ -->
+  <?php $bvk_hero = bvk_image_data( 'home', 'hero_image', bvk_asset( 'images/outdoor-wide.webp' ), "The natural outdoor play space at Borman Village Kids, with timber boardwalks, shade sails and young trees under a clear blue sky." ); ?>
   <section class="hero">
     <div class="hero-media">
-      <img src="<?php echo esc_url( bvk_asset( 'images/outdoor-wide.webp' ) ); ?>" alt="The natural outdoor play space at Borman Village Kids, with timber boardwalks, shade sails and young trees under a clear blue sky." fetchpriority="high">
+      <img src="<?php echo esc_url( $bvk_hero['src'] ); ?>" alt="<?php echo esc_attr( $bvk_hero['alt'] ); ?>" fetchpriority="high">
     </div>
     <div class="wrap hero-inner">
       <span class="kicker">Ng&#257; mihi nui, welcome</span>
-      <h1>A home away from home, for your little one.</h1>
-      <p class="hero-sub">A purpose-built early learning village where your tamariki are cared for, known by name, and free to explore.</p>
+      <h1><?php bvk_text( 'home', 'hero_heading', 'A home away from home, for your little one.' ); ?></h1>
+      <p class="hero-sub"><?php bvk_text( 'home', 'hero_text', 'A purpose-built early learning village where your tamariki are cared for, known by name, and free to explore.' ); ?></p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="<?php echo esc_url( BVK_ENQUIRY_URL ); ?>" target="_blank" rel="noopener">Enquire about a place <span class="arrow">&rarr;</span></a>
         <a class="btn btn-ghost-light btn-lg" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Take a look around</a>
@@ -27,13 +28,13 @@ get_header();
           <span class="kicker">Our village</span>
           <h2>A calm, happy place where your child belongs.</h2>
           <div class="text-block stack">
-            <p class="lead">Somewhere your child feels safe and settled, and somewhere you do too.</p>
-            <p>We are a small community of tamariki, wh&#257;nau and kaiako. We take the time to know your family and reflect your hopes for your child. Our door is always open.</p>
+            <?php bvk_rich( 'home', 'welcome_text', "Somewhere your child feels safe and settled, and somewhere you do too.\n\nWe are a small community of tamariki, wh\xc4\x81nau and kaiako. We take the time to know your family and reflect your hopes for your child. Our door is always open.", 'lead' ); ?>
           </div>
         </div>
+        <?php $bvk_welcome_img = bvk_image_data( 'home', 'welcome_image', bvk_asset( 'images/baby.webp' ), 'A young child in a floral dress smiling as she plays with a wooden puzzle at a low table.' ); ?>
         <div class="split-media reveal d1">
           <div class="framed">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/baby.webp' ) ); ?>" alt="A young child in a floral dress smiling as she plays with a wooden puzzle at a low table.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_welcome_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_welcome_img['alt'] ); ?>">
           </div>
         </div>
       </div>
@@ -48,35 +49,40 @@ get_header();
           <span class="kicker coral">What matters to us</span>
           <h2 class="mt-s">The things that make the days good.</h2>
         </div>
-        <p class="maxw">Small choices, made with care every day, from the kai on the table to the people in the room.</p>
+        <p class="maxw"><?php bvk_text( 'home', 'pillars_intro', 'Small choices, made with care every day, from the kai on the table to the people in the room.' ); ?></p>
       </div>
+      <?php
+      $bvk_kai_img = bvk_image_data( 'home', 'pillar_kai_image', bvk_asset( 'images/kai-comp.webp' ), 'A child choosing from colourful plates of fresh fruit and vegetables at mealtime.' );
+      $bvk_curr_img = bvk_image_data( 'home', 'pillar_curriculum_image', bvk_asset( 'images/home-gallery-1.webp' ), 'Two young children exploring and sorting together at a table.' );
+      $bvk_teach_img = bvk_image_data( 'home', 'pillar_teachers_image', bvk_asset( 'images/teachers.webp' ), 'Two Borman Village Kids teachers smiling together in their branded t-shirts.' );
+      ?>
       <div class="grid-3">
         <article class="card card-photo accent-sun reveal">
           <!-- COMP ONLY: watermarked Unsplash+ preview for client approval. Replace with the licensed file once rights are purchased. -->
           <div class="card-photo-top">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/kai-comp.webp' ) ); ?>" alt="A child choosing from colourful plates of fresh fruit and vegetables at mealtime.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_kai_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_kai_img['alt'] ); ?>">
           </div>
           <details class="card-photo-body expander" open>
             <summary><h3>Nutritious kai, made on-site</h3></summary>
-            <p>Morning tea, lunch and afternoon tea, cooked fresh here each day. Organic where we can, and every dietary need catered for.</p>
+            <p><?php bvk_text( 'home', 'pillar_kai_text', 'Morning tea, lunch and afternoon tea, cooked fresh here each day. Organic where we can, and every dietary need catered for.' ); ?></p>
           </details>
         </article>
         <article class="card card-photo accent-leaf reveal d1">
           <div class="card-photo-top">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/home-gallery-1.webp' ) ); ?>" alt="Two young children exploring and sorting together at a table.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_curr_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_curr_img['alt'] ); ?>">
           </div>
           <details class="card-photo-body expander" open>
             <summary><h3>Guided by Te Wh&#257;riki</h3></summary>
-            <p>Aotearoa's early childhood curriculum, weaving care and learning together so children grow into confident learners.</p>
+            <p><?php bvk_text( 'home', 'pillar_curriculum_text', "Aotearoa's early childhood curriculum, weaving care and learning together so children grow into confident learners." ); ?></p>
           </details>
         </article>
         <article class="card card-photo accent-coral reveal d2">
           <div class="card-photo-top">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/teachers.webp' ) ); ?>" alt="Two Borman Village Kids teachers smiling together in their branded t-shirts." style="object-position: center 22%">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_teach_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_teach_img['alt'] ); ?>" style="object-position: center 22%">
           </div>
           <details class="card-photo-body expander" open>
             <summary><h3>100% qualified kaiako</h3></summary>
-            <p>Every teacher in our required ratio is fully qualified. We add more on top too, primary-trained and in training, so there is always time for your child.</p>
+            <p><?php bvk_text( 'home', 'pillar_teachers_text', 'Every teacher in our required ratio is fully qualified. We add more on top too, primary-trained and in training, so there is always time for your child.' ); ?></p>
           </details>
         </article>
       </div>
@@ -100,8 +106,7 @@ get_header();
           <span class="kicker leaf">Purpose built, by us</span>
           <h2>A centre designed around how children actually grow.</h2>
           <div class="text-block stack">
-            <p>We designed our centre ourselves, with classrooms shaped to each age and spaces that exceed the Ministry's requirement for room per child.</p>
-            <p>Inside and out, we use natural materials and leave plenty of room to explore, dig, build and rest.</p>
+            <?php bvk_rich( 'home', 'story_text', "We designed our centre ourselves, with classrooms shaped to each age and spaces that exceed the Ministry's requirement for room per child.\n\nInside and out, we use natural materials and leave plenty of room to explore, dig, build and rest." ); ?>
           </div>
           <a class="btn btn-outline mt-m" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Our story <span class="arrow">&rarr;</span></a>
         </div>
@@ -182,20 +187,20 @@ get_header();
   </section>
 
   <!-- ============ STORYPARK ============ -->
+  <?php $bvk_sp_img = bvk_image_data( 'home', 'storypark_image', bvk_asset( 'images/craft.webp' ), 'A tidy craft area with jars of coloured pencils, ready for the day.' ); ?>
   <section class="section">
     <div class="wrap">
       <div class="split">
         <div class="split-media reveal">
           <div class="framed coral">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/craft.webp' ) ); ?>" alt="A tidy craft area with jars of coloured pencils, ready for the day.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_sp_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_sp_img['alt'] ); ?>">
           </div>
         </div>
         <div class="split-body reveal d1">
           <span class="kicker coral">Stay close, every day</span>
           <h2>See the little moments, as they happen.</h2>
           <div class="text-block stack">
-            <p>We record your child's learning through <strong>Storypark</strong>, a secure online space where we share photos, stories and progress, privately with you.</p>
-            <p>Local walks and excursions are part of our curriculum, and our open-door policy means you are welcome any time.</p>
+            <?php bvk_rich( 'home', 'storypark_text', "We record your child's learning through <strong>Storypark</strong>, a secure online space where we share photos, stories and progress, privately with you.\n\nLocal walks and excursions are part of our curriculum, and our open-door policy means you are welcome any time." ); ?>
           </div>
           <div class="chips mt-m">
             <span class="chip">Secure &amp; private</span>

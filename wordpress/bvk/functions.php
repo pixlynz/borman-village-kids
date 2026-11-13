@@ -5,14 +5,18 @@
  * header.php / footer.php    shared chrome (nav, footer)
  * front-page.php              Home
  * templates/*.php             About, Our Team, Enrolment, Contact page templates
- * inc/setup.php                first-time setup: creates the four pages on activation
+ * inc/setup.php                first-time setup: creates the pages on activation
+ * inc/content.php              reads an editable field, falling back to the theme default
+ * inc/editor.php                registers the Secure Custom Fields editing screens
  */
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BVK_VERSION', '1.0.4' );
+define( 'BVK_VERSION', '1.1.0' );
 
 require_once __DIR__ . '/inc/setup.php';
+require_once __DIR__ . '/inc/content.php';
+require_once __DIR__ . '/inc/editor.php';
 
 add_action(
 	'after_setup_theme',

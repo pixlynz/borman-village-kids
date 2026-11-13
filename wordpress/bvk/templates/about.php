@@ -8,9 +8,10 @@ get_header();
 ?>
 
   <!-- ============ PAGE HERO ============ -->
+  <?php $bvk_hero = bvk_image_data( 'about', 'hero_image', bvk_asset( 'images/outdoor.webp' ), 'The natural outdoor play area with boardwalks, shade sails and young trees.' ); ?>
   <section class="page-hero">
     <div class="page-hero-media">
-      <img fetchpriority="high" src="<?php echo esc_url( bvk_asset( 'images/outdoor.webp' ) ); ?>" alt="The natural outdoor play area with boardwalks, shade sails and young trees.">
+      <img fetchpriority="high" src="<?php echo esc_url( $bvk_hero['src'] ); ?>" alt="<?php echo esc_attr( $bvk_hero['alt'] ); ?>">
     </div>
     <div class="wrap">
       <p class="crumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a> &nbsp;/&nbsp; About</p>
@@ -23,7 +24,7 @@ get_header();
   <!-- ============ INTRO ============ -->
   <section class="section">
     <div class="wrap center maxw mx-auto reveal">
-      <p class="lead">We have a community where parents and children feel supported and can thrive, where you have a voice and we reflect your family's values and hopes.</p>
+      <p class="lead"><?php bvk_text( 'about', 'intro_lead', "We have a community where parents and children feel supported and can thrive, where you have a voice and we reflect your family's values and hopes." ); ?></p>
     </div>
   </section>
 
@@ -31,17 +32,17 @@ get_header();
   <section class="section band-sand">
     <div class="wrap">
       <div class="split">
+        <?php $bvk_family_img = bvk_image_data( 'about', 'family_image', bvk_asset( 'images/todd-owner.webp' ), 'Todd, the owner of Borman Village Kids, smiling warmly.' ); ?>
         <div class="split-media reveal">
           <div class="framed">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/todd-owner.webp' ) ); ?>" alt="Todd, the owner of Borman Village Kids, smiling warmly.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_family_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_family_img['alt'] ); ?>">
           </div>
         </div>
         <div class="split-body reveal d1">
           <span class="kicker">Family focus</span>
           <h2>Run by a family, for families.</h2>
           <div class="text-block stack">
-            <p>Our owner is a father of four and has been a centre owner-operator since May 2000. That experience shapes everything here.</p>
-            <p>Borman Village Kids is decades of learning about what helps children, and families, feel settled, safe and ready to thrive.</p>
+            <?php bvk_rich( 'about', 'family_text', "Our owner is a father of four and has been a centre owner-operator since May 2000. That experience shapes everything here.\n\nBorman Village Kids is decades of learning about what helps children, and families, feel settled, safe and ready to thrive." ); ?>
           </div>
         </div>
       </div>
@@ -52,17 +53,17 @@ get_header();
   <section class="section">
     <div class="wrap">
       <div class="split reverse">
+        <?php $bvk_purpose_img = bvk_image_data( 'about', 'purpose_image', bvk_asset( 'images/explore.webp' ), 'Aerial view of the purpose-built Borman Village Kids centre, with car park, covered decks and a large planted outdoor play area.' ); ?>
         <div class="split-media reveal">
           <div class="framed leaf tr">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/explore.webp' ) ); ?>" alt="Aerial view of the purpose-built Borman Village Kids centre, with car park, covered decks and a large planted outdoor play area.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_purpose_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_purpose_img['alt'] ); ?>">
           </div>
         </div>
         <div class="split-body reveal d1">
           <span class="kicker leaf">Purpose-built design</span>
           <h2>Spaces designed around your child.</h2>
           <div class="text-block stack">
-            <p>We designed our centre ourselves, with classrooms shaped to the developmental needs of each age.</p>
-            <p>We focus on infant care, toddler transitions and preschool, in calm, natural spaces that exceed the Ministry's requirement for room per child.</p>
+            <?php bvk_rich( 'about', 'purpose_text', 'We designed our centre ourselves, with classrooms shaped to the developmental needs of each age.' . "\n\n" . "We focus on infant care, toddler transitions and preschool, in calm, natural spaces that exceed the Ministry's requirement for room per child." ); ?>
           </div>
         </div>
       </div>
@@ -117,8 +118,7 @@ get_header();
           <span class="kicker">Our curriculum</span>
           <h2>Learning woven through the day.</h2>
           <div class="text-block stack">
-            <p>Our programme is based on <strong>Te Wh&#257;riki</strong>, New Zealand's early childhood curriculum, weaving care and education through planned and everyday moments.</p>
-            <p>Those moments build the knowledge, skills and attitudes that grow confident, capable learners.</p>
+            <?php bvk_rich( 'about', 'curriculum_text', "Our programme is based on <strong>Te Wh\xc4\x81riki</strong>, New Zealand's early childhood curriculum, weaving care and education through planned and everyday moments.\n\nThose moments build the knowledge, skills and attitudes that grow confident, capable learners." ); ?>
           </div>
           <ul class="ticks mt-m">
             <li><span><strong>Care and education together</strong>Not one or the other, both, all day.</span></li>
@@ -126,9 +126,10 @@ get_header();
             <li><span><strong>Local walks and excursions</strong>The neighbourhood is part of our classroom.</span></li>
           </ul>
         </div>
+        <?php $bvk_curr_img2 = bvk_image_data( 'about', 'curriculum_image', bvk_asset( 'images/walk-excursion.webp' ), 'Tamariki walking together in hi-vis vests on a local neighbourhood walk.' ); ?>
         <div class="split-media reveal d1">
           <div class="framed tr">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/walk-excursion.webp' ) ); ?>" alt="Tamariki walking together in hi-vis vests on a local neighbourhood walk.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_curr_img2['src'] ); ?>" alt="<?php echo esc_attr( $bvk_curr_img2['alt'] ); ?>">
           </div>
         </div>
       </div>
@@ -198,8 +199,7 @@ get_header();
           <span class="kicker leaf">Our promise to you</span>
           <h2>An open door, and a listening ear.</h2>
           <div class="text-block stack">
-            <p>We have an open-door policy. Wh&#257;nau are welcome to visit, share, and be part of the day, as much as they like.</p>
-            <p>We share your child's learning through Storypark, a secure online portfolio, privately with your family.</p>
+            <?php bvk_rich( 'about', 'opendoor_text', "We have an open-door policy. Wh\xc4\x81nau are welcome to visit, share, and be part of the day, as much as they like.\n\nWe share your child's learning through Storypark, a secure online portfolio, privately with your family." ); ?>
           </div>
         </div>
         <div class="split-body reveal d1">

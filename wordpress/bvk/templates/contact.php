@@ -8,9 +8,10 @@ get_header();
 ?>
 
   <!-- ============ PAGE HERO ============ -->
+  <?php $bvk_hero = bvk_image_data( 'contact', 'hero_image', bvk_asset( 'images/location.webp' ), 'Aerial view of Borman Village Kids, showing the centre, car park and large outdoor play space.' ); ?>
   <section class="page-hero">
     <div class="page-hero-media">
-      <img fetchpriority="high" src="<?php echo esc_url( bvk_asset( 'images/location.webp' ) ); ?>" alt="Aerial view of Borman Village Kids, showing the centre, car park and large outdoor play space.">
+      <img fetchpriority="high" src="<?php echo esc_url( $bvk_hero['src'] ); ?>" alt="<?php echo esc_attr( $bvk_hero['alt'] ); ?>">
     </div>
     <div class="wrap">
       <p class="crumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a> &nbsp;/&nbsp; Contact</p>
@@ -27,7 +28,7 @@ get_header();
         <div class="split-body reveal">
           <span class="kicker">Get in touch</span>
           <h2>Come and visit our village.</h2>
-          <p class="lead mt-s">The best way to know is to come and see us. Make an enquiry and we will arrange a time that suits.</p>
+          <p class="lead mt-s"><?php bvk_text( 'contact', 'intro_lead', 'The best way to know is to come and see us. Make an enquiry and we will arrange a time that suits.' ); ?></p>
 
           <div class="contact-list mt-l">
             <div class="contact-row">
@@ -66,9 +67,10 @@ get_header();
           </div>
         </div>
 
+        <?php $bvk_contact_img = bvk_image_data( 'contact', 'contact_image', bvk_asset( 'images/contact-centre.webp' ), 'A bright, airy classroom inside Borman Village Kids, with natural light, low shelves and a play teepee.' ); ?>
         <div class="split-media reveal d1">
           <div class="framed leaf tr">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/contact-centre.webp' ) ); ?>" alt="A bright, airy classroom inside Borman Village Kids, with natural light, low shelves and a play teepee.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_contact_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_contact_img['alt'] ); ?>">
           </div>
         </div>
       </div>
@@ -85,8 +87,7 @@ get_header();
         </div>
         <div class="reveal d1">
           <div class="text-block stack">
-            <p class="lead">We have an open-door policy. Families are welcome to be involved as much as they like.</p>
-            <p>Drop in to see the space, share a morning, or simply say kia ora. You and your tamariki are part of our community.</p>
+            <?php bvk_rich( 'contact', 'opendoor_text', 'We have an open-door policy. Families are welcome to be involved as much as they like.' . "\n\n" . 'Drop in to see the space, share a morning, or simply say kia ora. You and your tamariki are part of our community.', 'lead' ); ?>
           </div>
           <ul class="ticks mt-m">
             <li><span><strong>Visit any time</strong>No appointment needed to take a look around.</span></li>

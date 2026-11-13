@@ -8,9 +8,10 @@ get_header();
 ?>
 
   <!-- ============ PAGE HERO ============ -->
+  <?php $bvk_hero = bvk_image_data( 'team', 'hero_image', bvk_asset( 'images/room.webp' ), 'A calm classroom with a natural plywood table and colourful child-sized stools.' ); ?>
   <section class="page-hero">
     <div class="page-hero-media">
-      <img fetchpriority="high" src="<?php echo esc_url( bvk_asset( 'images/room.webp' ) ); ?>" alt="A calm classroom with a natural plywood table and colourful child-sized stools.">
+      <img fetchpriority="high" src="<?php echo esc_url( $bvk_hero['src'] ); ?>" alt="<?php echo esc_attr( $bvk_hero['alt'] ); ?>">
     </div>
     <div class="wrap">
       <p class="crumb"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a> &nbsp;/&nbsp; Our Team</p>
@@ -28,12 +29,13 @@ get_header();
           <span class="kicker">Fully qualified</span>
           <h2>100% qualified early childhood teachers.</h2>
           <div class="text-block stack">
-            <p class="lead">Every centre has to meet a required minimum ratio of adults to children. We take it a step further: every teacher who counts towards our ratio is a fully qualified early childhood educator, which is not always the case.</p>
+            <p class="lead"><?php bvk_text( 'team', 'intro_lead', 'Every centre has to meet a required minimum ratio of adults to children. We take it a step further: every teacher who counts towards our ratio is a fully qualified early childhood educator, which is not always the case.' ); ?></p>
           </div>
         </div>
+        <?php $bvk_intro_img = bvk_image_data( 'team', 'intro_image', bvk_asset( 'images/team-play.webp' ), 'The Borman Village Kids teaching team together, smiling in festive Santa hats.' ); ?>
         <div class="split-media reveal d1">
           <div class="framed primary tr">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/team-play.webp' ) ); ?>" alt="The Borman Village Kids teaching team together, smiling in festive Santa hats.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_intro_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_intro_img['alt'] ); ?>">
           </div>
         </div>
       </div>
@@ -78,9 +80,10 @@ get_header();
   <section class="section">
     <div class="wrap">
       <div class="split reverse">
+        <?php $bvk_expect_img = bvk_image_data( 'team', 'expect_image', bvk_asset( 'images/home-gallery-1.webp' ), 'Two children exploring coloured pieces together, supported by their teachers.' ); ?>
         <div class="split-media reveal">
           <div class="framed leaf">
-            <img loading="lazy" decoding="async" src="<?php echo esc_url( bvk_asset( 'images/home-gallery-1.webp' ) ); ?>" alt="Two children exploring coloured pieces together, supported by their teachers.">
+            <img loading="lazy" decoding="async" src="<?php echo esc_url( $bvk_expect_img['src'] ); ?>" alt="<?php echo esc_attr( $bvk_expect_img['alt'] ); ?>">
           </div>
         </div>
         <div class="split-body reveal d1">
@@ -102,7 +105,7 @@ get_header();
     <div class="wrap center maxw mx-auto reveal">
       <span class="kicker" style="justify-content:center">From our owner</span>
       <p class="pull mx-auto mt-s" style="max-width:26ch">A father of four, and a centre owner-operator since <span class="hl" style="color:var(--kowhai)">May 2000.</span></p>
-      <p class="mt-m mx-auto">Borman Village Kids reflects everything we have learnt over our years in early childhood, and what we believe is best practice. It is built to be a community where children and parents feel comfortable, supported, and able to thrive.</p>
+      <p class="mt-m mx-auto"><?php bvk_text( 'team', 'owner_text', 'Borman Village Kids reflects everything we have learnt over our years in early childhood, and what we believe is best practice. It is built to be a community where children and parents feel comfortable, supported, and able to thrive.' ); ?></p>
       <a class="btn btn-outline mt-l" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Read our story <span class="arrow">&rarr;</span></a>
     </div>
   </section>
