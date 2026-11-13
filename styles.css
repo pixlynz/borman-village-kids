@@ -596,6 +596,9 @@ a.val:hover { color: var(--coral); }
 .footer-hours span { color: #fff; font-weight: 700; }
 .footer-bar { border-top: 1px solid rgba(255,255,255,0.12); padding-block: 1.5rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: 0.85rem; }
 .footer-bar .chips-mini { display: flex; gap: 1.2rem; }
+.footer-bar-right { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+.credit { color: #fff; opacity: 0.6; text-decoration: underline; text-underline-offset: 2px; transition: opacity 0.2s var(--ease); }
+.credit:hover { opacity: 1; }
 
 /* ---------- Reveal on scroll ---------- */
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
